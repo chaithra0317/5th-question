@@ -18,8 +18,8 @@ pipeline {
 			agent {label 'tomcat'}
 			steps {
 				echo "the job name = ${env.JOB_NAME}"
-				sh 'job_url = ${JOB_URL}'
-				echo "the user is: ${usr}"
+				echo "the job_url = ${JOB_URL}"
+				echo "the user = ${usr}"
 			}
 		}	
 		stage("2nd stage") {
@@ -38,7 +38,7 @@ pipeline {
 				branch 'development'
             }
 			steps {
-				sh 'jenkins_url = ${JENKINS_URL}'
+				echo "the jenkins_url = ${JENKINS_URL}"
 			}
 		}
 		stage("4th stage") {
