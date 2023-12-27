@@ -1,8 +1,8 @@
 pipeline {
     agent none
 	triggers {
-	        pollSCM '* * * * *'
-		    cron '* * * * *'
+	        pollSCM '* * * *\ *'
+		    cron '* * *  *'
 	}
 	parameters {
 			string (defaultValue: 'chaithra', description: 'Enter the username', name: 'USER_NAME')
